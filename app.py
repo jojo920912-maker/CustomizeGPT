@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, render_template
+import requests
 
 app = Flask(__name__)
 
@@ -9,7 +10,14 @@ def home():
 @app.route('/callAI', methods=['GET'])
 def call_ai():
     # Here you would add the logic to handle the AI call
-    return jsonify({"message":"Hi there! I'm not online yet, but I'll be here soon!"})
+    message = calln8n("Hello")
+    return jsonify({"message": message["output"]})
+
+def calln8n(prompt):
+    response = requests.get("http://localhost:5678/webhook-test/408aed93-9609-4378-b2d3-7a1b22eb9abe", params={"content": prompt})
+    message = response.json()
+    return message
+
 
 if __name__ == '__main__':
     app.run(port=5050, debug=True)
