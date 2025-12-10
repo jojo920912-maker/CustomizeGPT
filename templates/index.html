@@ -10,6 +10,37 @@
                 padding: 0;
                 font-family: Arial, sans-serif;
             }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background-color: #343541;
+                color : #ececf1;
+            }
+
+            .header {
+                background-color: #202123;
+                padding: 12px 20px;
+                border-bottom: 1px solid #565869;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .header h1 {
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            .chat-container {
+                flex: 1;
+                padding: 20px;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
         </style>
     </head>
     <body>
