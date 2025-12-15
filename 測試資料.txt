@@ -1,7 +1,7 @@
 這是測試喔~
-<<<<<<< Updated upstream
 
 這是測試喔喔
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 我好餓
@@ -20,3 +20,9 @@ tttttttttt ppppp ooo
 
 
 中午要吃啥
+=======
+
+我好餓
+
+要吃什麼?
+>>>>>>> e4d00d67b096f131582bb3e82a269e5e1f06d23b
